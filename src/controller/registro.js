@@ -2,7 +2,7 @@ import { hash } from "bcrypt"
 import userModel from "../schema/schema_user.js"
 import salt from "../const/salt.js"
 
-const userLoginControl = async (req, res) => {
+const userRegisterControl = async (req, res) => {
     const {_id, nombres, apellidos, edad, email, rol, pais, password  } = req.body
 
      //buscar id
@@ -43,4 +43,4 @@ const userLoginControl = async (req, res) => {
 
 }
 
-export default userLoginControl
+export default userRegisterControl
