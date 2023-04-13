@@ -21,7 +21,7 @@ const userRegisterControl = async (req, res) => {
 
     //registro de usuario
 
-    const hassedUsuario = await hash(password, salt)
+    const hashedPassword  = await hash(password, salt)
 
     const user = new userModel(
         {
@@ -32,7 +32,7 @@ const userRegisterControl = async (req, res) => {
             email,
             rol, 
             pais, 
-            password: hassedUsuario,
+            password: hashedPassword,
         }
     )
 
